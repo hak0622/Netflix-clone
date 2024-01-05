@@ -10,3 +10,8 @@
 ![image](https://github.com/hak0622/Netflix-clone/assets/128469147/792e8073-4c6d-44da-84ed-8204ef12ae1b)
 
 ![image](https://github.com/hak0622/Netflix-clone/assets/128469147/d18615cc-b140-46db-8d0f-465ad730d744)
+
+![image](https://github.com/hak0622/Netflix-clone/assets/128469147/99964042-946c-404d-b381-85af76a66cf8)
+
+## 참고 자료
+https://github.com/woochul2/netflix-clone
