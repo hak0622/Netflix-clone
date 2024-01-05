@@ -13,5 +13,18 @@
 
 ![image](https://github.com/hak0622/Netflix-clone/assets/128469147/99964042-946c-404d-b381-85af76a66cf8)
 
+## 진행 사항
+
+01/04 
+- API 발금
+- MYSQL 연동
+- 로비 페이지 구현
+- 회원가입 페이지 구현
+
+01/05
+- 로그인 페이지 제작
+- 메인 페이지 연동
+- 메인 페이지 로그아웃 기능 추가
+  
 ## 참고 자료
 https://github.com/woochul2/netflix-clone
