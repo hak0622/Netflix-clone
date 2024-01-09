@@ -9,6 +9,10 @@
 
 ![image](https://github.com/hak0622/Netflix-clone/assets/128469147/792e8073-4c6d-44da-84ed-8204ef12ae1b)
 
+![image](https://github.com/hak0622/Netflix-clone/assets/128469147/36d80232-203a-431a-b9ec-ab4b9c8b3a9a)
+
+![image](https://github.com/hak0622/Netflix-clone/assets/128469147/0ee113e4-063a-4127-ba73-6c71a583ab34)
+
 ![image](https://github.com/hak0622/Netflix-clone/assets/128469147/d18615cc-b140-46db-8d0f-465ad730d744)
 
 ![image](https://github.com/hak0622/Netflix-clone/assets/128469147/99964042-946c-404d-b381-85af76a66cf8)
@@ -25,6 +29,12 @@
 - 로그인 페이지 제작
 - 메인 페이지 연동
 - 메인 페이지 로그아웃 기능 추가
+
+01/06
+- 아이디 찾기 추가
+
+01/07
+- 비밀번호 찾기 추가
   
 ## 참고 자료
 https://github.com/woochul2/netflix-clone
