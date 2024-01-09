@@ -20,9 +20,10 @@ app.post('/api/signup', function (req, res) {
   var username = req.body.username;
   var password = req.body.password;
   var email = req.body.email;
+  var birthDate = req.body.birthDate;
 
-  var sql = 'INSERT INTO user (username, password, email) VALUES (?, ?, ?)';
-  db.query(sql, [username, password, email], function (error, results, fields) {
+  var sql = 'INSERT INTO user (username, password, email,birthDate) VALUES (?, ?, ?, ?)';
+  db.query(sql, [username, password, email,birthDate], function (error, results, fields) {
     if (error) {
       res.status(500).send('회원가입 중 에러가 발생했습니다.');
       return;
@@ -73,6 +74,48 @@ app.get('/api/check-email', function (req, res) {
     } else {
       res.send({ isDuplicated: false }); // 이메일이 중복되지 않음
     }
+  });
+});
+
+app.get('/api/find-email', async (req, res) => {
+  const { username, birthDate } = req.query;
+
+  var sql = 'SELECT * FROM user WHERE username = ? AND birthDate = ?';
+  db.query(sql, [username, birthDate], function (error, results, fields) {
+    if (error) {
+      res.status(500).send('이메일 찾기 중 에러가 발생했습니다.');
+      return;
+    }
+
+    if (results.length === 0) {
+      res.status(400).send('해당 이름과 생년월일을 가진 사용자가 없습니다.');
+      return;
+    }
+
+    var user = results[0];
+    res.send({ email: user.email });
+  });
+});
+
+app.post('/api/find-password', function (req, res) {
+  var email = req.body.email;
+  var username = req.body.username;
+  var birthDate = req.body.birthDate;
+  
+  var sql = 'SELECT * FROM user WHERE email = ? AND username = ? AND birthDate = ?';
+  db.query(sql, [email, username, birthDate], function (error, results, fields) {
+    if (error) {
+      res.status(500).send('비밀번호 찾기 중 에러가 발생했습니다.');
+      return;
+    }
+
+    if (results.length === 0) {
+      res.status(400).send('해당 이메일, 이름, 생년월일을 가진 사용자가 없습니다.');
+      return;
+    }
+
+    var user = results[0];
+    res.send({ password: user.password });
   });
 });
 
