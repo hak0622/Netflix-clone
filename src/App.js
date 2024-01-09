@@ -6,6 +6,8 @@ import TVShows from './pages/TVShows';
 import SignUp from './pages/signup';
 import Lobby from './pages/Lobby'; 
 import Login from './pages/Login';
+import FindID from './pages/findID';
+import FindPW from './pages/findPW';
 
 function App() {
   return (
@@ -14,6 +16,8 @@ function App() {
         <Route path="/" element={<Lobby />} /> 
         <Route path="/Lobby" element={<Lobby />} />
         <Route path="/Login" element={<Login />} />
+        <Route path="/findID" element={<FindID />} />
+        <Route path="/findPW" element={<FindPW />} />
         <Route path="/tv" element={<TVShows />}>
           <Route path=":id" element={<></>} />
         </Route>
